@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "dashboard-hero",
+      "description": "Abstract futuristic learning background",
+      "imageUrl": "https://picsum.photos/seed/learn-hero/1200/600",
+      "imageHint": "digital learning"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "UserStats": {
+      "title": "UserStats",
+      "type": "object",
+      "description": "Aggregated usage statistics for a user's interactions with various learning tools.",
+      "properties": {
+        "chats": { "type": "number", "description": "Total AI tutor sessions." },
+        "videos": { "type": "number", "description": "Total videos analyzed." },
+        "interviews": { "type": "number", "description": "Total mock interviews completed." },
+        "questions": { "type": "number", "description": "Total exam questions generated." },
+        "tutor_count": { "type": "number" },
+        "video_count": { "type": "number" },
+        "interview_count": { "type": "number" },
+        "pyq_count": { "type": "number" },
+        "performance_count": { "type": "number" },
+        "scheduler_count": { "type": "number" },
+        "internship_count": { "type": "number" }
+      }
+    }
+  },
+  "auth": {
+    "providers": [
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}/stats/overall",
+        "definition": {
+          "entityName": "UserStats",
+          "schema": {
+            "$ref": "#/backend/entities/UserStats"
+          },
+          "description": "Stores overall usage statistics for a specific user.",
+          "params": [
+            { "name": "userId", "description": "The UID of the user." }
+          ]
+        }
+      }
+    ]
+  }
+}
